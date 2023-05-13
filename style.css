@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --border-color: rgba(254, 254, 255, 0.1);
+  --fundo-url: url(asses/fundogalaxy1.jpg);
+  --fundo-sollua-color-url: black url(asses/lua.svg);
+  --fundo-link-color: rgba(255, 255, 255, 0.857)
+  --mouse-color: black;
+ 
+
+}
+
+.light {
+  --text-color: black;
+  --fundo-url: url(asses/fundolight.jpg);
+  --border-color: rgba(0,0,0,0.2);
+   --fundo-sollua-color-url: white url(asses/sol.svg);
+  --fundo-link-color: rgba(255,255,255,0.1);
+  --mouse-color: white;
+  
+
+}
+
+body {
+  /*
+  background-image: url(fundoblack.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+
+  /*backgroud: color image repeat position / size (todos codicos de background sinplificado) */
+  background: var(--fundo-url) no-repeat top center / cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 58px auto 58px;
+  padding: 0 24px;
+}
+#darkmode{
+   position: relative;
+  width: 64px;
+
+  margin: 4% auto;
+}
+#darkmode button {
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  background: var(--fundo-sollua-color-url) no-repeat center;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 1;
+  transform: translatey(-50%);
+}
+.light #darkmode button{
+  right: 0%;
+  left: initial;
+  
+}
+#darkmode span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--fundo-link-color);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+#perfil img {
+  width: 140px;
+}
+#perfil p {
+padding: 24px 0px ;
+
+}
+#perfil {
+  text-align: center;
+  padding: 14px 0px 14px;
+}
+
+/* links */
+
+ul {
+  list-style: none;
+  padding: 0px 0px 60px;
+  flex-direction: column;
+  display: flex;
+  gap: 6px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--fundo-link-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+
+  text-decoration: none;
+  font-weight: 500px;
+
+  transition: background 0.5s;
+  transition: transform 0.4s;
+}
+
+ul li a:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.857);
+  border: 1.5px solid white;
+  backdrop-filter: blur(106px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#insta :hover {
+  color: var(--mouse-color);
+  background-image: linear-gradient(
+    to left,
+    #ffda48,
+    #f26549,
+    #da2f92,
+    #6e35be
+  );
+}
+
+#behance :hover {
+  color: var(--mouse-color);
+  background-image: linear-gradient(to left, rgb(73, 138, 251), rgb(7, 7, 165));
+}
+#github :hover {
+  color: black;
+  border-radius: 10px;
+  background: url(./asses/github.jpg);
+}
+
+#doar :hover {
+  color: black;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+
+  padding: 4px 24px 24px;
+
+  font-size: 40px;
+}
+#icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 30%;
+
+  transition: background 0.3s;
+}
+#icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  /*padding: 16px;*/
+  border-radius: 50%;
+}
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
