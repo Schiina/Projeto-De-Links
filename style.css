@@ -170,7 +170,7 @@ ul li a:hover {
 #github :hover {
   color: black;
   border-radius: 10px;
-  background: url(./asses/github.jpg);
+  background: url(./asses/github.jpg) repeat;
 }
 
 #doar :hover {
